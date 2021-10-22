@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <style>
+        html {
+            background-color: white;
+        }
+        h1 {
+            color: #53bd84;
+        }
+        form {
+            width:500px;
+            margin: 100px auto;
+        }
+        .search {
+            padding:12px 60px;
+            background:rgba(50, 50, 50, 0.2);
+            border:0px solid #dbdbdb;
+            border-radius: 5px;
+        }
+        .button {
+            /* position:relative; */
+            padding:10px 60px;
+            left:-8px;
+            border:2px solid #53bd84;
+            border-radius: 60px;
+            background-color:#53bd84;
+            color:#fafafa;
+        }
+        .button:hover  {
+            background-color:#fafafa;
+            color:#207cca;
+        }
+        .container .pass {
+            margin:50px auto;
+        }
+        /* .bacground {
+            padding:5px 50px;
+            background:rgba(50, 50, 50, 0.2);
+            border:0px solid #dbdbdb;
+            border-radius: 20px;
+        } */
+    </style>
+    <meta charset="utf-8">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <div class="bacground">
+        <input type="text" placeholder="...." required><br>
+    </div> -->
+    <center>
+        <form>
+            <h1>Login</h1>
+            <div class="container">
+                <input class="search" type="text" placeholder="Masukan NIK..." required><br>
+                <br>	
+                <input class="search" type="text" placeholder="Masukan Katasandi..." required><br>
+                <br>
+                <input class="button" type="button" value="Login">
+                <br>
+
+                <div class="pass">
+                    <a href="" style="color:DodgerBlue;">Lupa password?</a>
+                    <a href="" style="color:DodgerBlue;">Pengaturan</a>
+                </div>
+            </div>	
+        </form>
+    </center>
+</body>
+</html>
+
