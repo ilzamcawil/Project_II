@@ -50,14 +50,15 @@
         <input type="text" placeholder="...." required><br>
     </div> -->
     <center>
-        <form>
+        <form method="post" action=""> 
+            {% csrf_token %}
             <h1>Login</h1>
             <div class="container">
-                <input class="search" type="text" placeholder="Masukan NIK..." required><br>
+                <input name="nik" class="search" type="number" placeholder="Masukan NIK..." required><br>
                 <br>	
-                <input class="search" type="text" placeholder="Masukan Katasandi..." required><br>
+                <input name="password" class="search" type="text" placeholder="Masukan Katasandi..." required><br>
                 <br>
-                <input class="button" type="button" value="Login">
+                <button type="submit" class="button">Login</button>
                 <br>
 
                 <div class="pass">
