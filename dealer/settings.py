@@ -1,3 +1,4 @@
+
 """
 Django settings for dealer project.
 
@@ -79,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'dealer',
         'USER': 'postgres',
-        'PASSWORD': 'psqlpraxis',
+        'PASSWORD': 'praxisunu',
         'HOST': 'localhost',
         'PORT': '',
     }
