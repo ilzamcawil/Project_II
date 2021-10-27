@@ -4,6 +4,7 @@ from . import models
 
 # Create your views here.
 
+# tampilan awal.
 def index(req):
     if req.POST:
         input_nik = req.POST['nik']
