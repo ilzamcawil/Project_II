@@ -1,4 +1,5 @@
 from django.db import models
+from django.http import request
 from django.shortcuts import redirect, render
 from . import models
 
@@ -18,5 +19,13 @@ def index(req):
     return render(req, 'login/index.html', {
         'data': data,
     })
-        
 
+def index(req):
+    return render(req, 'katalog/indexhompage.html')
+    
+
+def about(req):
+    return render(req, 'about/about.html')
+
+def shop(req):
+    return render(req, 'shop/shop.html')
