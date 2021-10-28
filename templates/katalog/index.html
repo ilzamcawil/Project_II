@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+
+<html lang="id">
+    <head>
+        <title>E-Katalog 5.0</title>
+	    <link rel="icon" type="image/x-icon" href="/public/images/favicon.ico">        
+        <link rel="stylesheet" media="screen" href="/public/stylesheets/app.min.css">
+        <link rel="stylesheet" media="screen" href="/public/stylesheets/landing.css">
+		<link rel="stylesheet" media="screen" href="/public/fa/css/font-awesome.min.css">
+		
+        <link rel="shortcut icon" type="image/png" href="/public/images/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </head>
+    <body id="custom-body">
+    	<div id="main">
+    		<!-- Content -->
+   			<div class="main-content-wrapper">
+   				
+<div class="container">
+	
+	<div class="login-wrapper">
+	
+		<div class="row">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-2 col-md-offset-5 col-lg-2 col-lg-offset-5">
+				<div class="login-header">
+					<a href="/">
+						<img alt="E-Katalog LKPP" class="img img-responsive center-block" src="/public/images/logo_merah.png" />
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+				<div class="login-body">
+					
+					
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#penyedia"
+							aria-controls="penyedia" role="tab" data-toggle="tab">Vendor Login</a></li>
+						<li role="presentation"><a href="#non-penyedia"
+							aria-controls="non-penyedia" role="tab" data-toggle="tab">Non Vendor Login</a></li>
+					</ul>
+	
+					<div class="tab-content">
+						<!-- Login Penyedia -->
+						<div role="tabpanel" class="tab-pane active" id="penyedia">
+							<form action="/admin.userctr/loginpenyediasubmit" method="post" accept-charset="utf-8" enctype="application/x-www-form-urlencoded" >
+<input type="hidden" name="authenticityToken" value="b2740788f2659edabebaffa543e7a49ea55dbaeb"/>
+
+                                <div class="form-group">
+								<input type="text" class="form-control" placeholder="Username"
+									name="username" />
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control"
+									placeholder="Password" name="password" />
+							</div>
+							<button class="btn btn-block btn-md btn-danger">Login</button>
+							
+</form>
+						</div>
+						<!-- Login Non Penyedia -->
+						<div role="tabpanel" class="tab-pane" id="non-penyedia">
+							<form action="/admin.userctr/loginlokalsubmit" method="post" accept-charset="utf-8" enctype="application/x-www-form-urlencoded" >
+<input type="hidden" name="authenticityToken" value="b2740788f2659edabebaffa543e7a49ea55dbaeb"/>
+
+                                <div class="form-group">
+								<input type="text" class="form-control" placeholder="Username"
+									name="username" value="" />
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control"
+									placeholder="Password" name="password" />
+							</div>
+							<button class="btn btn-block btn-md btn-danger">Login</button>
+							
+</form>      
+									 
+						</div>
+					</div>
+				</div>
+
+				<div class="login-footer">
+					<a href="/"><span class="fa fa-arrow-circle-left"></span> Back to Homepage</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+</div>
+
+   			</div>
+   			<!-- End Content -->
+   			
+   			<!-- Footer -->
+   			<div class="main-footer-wrapper">
+   				<div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="https://www.facebook.com/eprocurement.lkpp/" target="_blank" rel="noopener noreferrer" class="btn btn-social-icon btn-facebook">
+                                <span class="fa fa-facebook"></span>
+                            </a>
+                            <a href="https://twitter.com/eproc_lkpp/" target="_blank" rel="noopener noreferrer" class="btn btn-social-icon btn-twitter">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                            <a href="https://www.instagram.com/eproc.lkpp/" target="_blank" rel="noopener noreferrer" class="btn btn-social-icon btn-instagram">
+                                <span class="fa fa-instagram"></span>
+                            </a>
+                            
+                                
+                            
+                        </div>
+                    </div>
+                    <br>
+	        		<div class="row">
+	        			<div class="col-md-12">
+		        			&copy; 2020 Lembaga Kebijakan Pengadaan Barang/Jasa Pemerintah (LKPP)
+		        		</div>
+	        		</div>
+	        	</div>
+   			</div>
+   			<!-- End Footer -->
+    	</div>
+        
+        <script src="/public/javascripts/jquery-1.12.1.min.js" type="text/javascript"> </script>
+        <script src="/public/javascripts/bootstrap.min.js" type="text/javascript"> </script>
+        <script src="/public/javascripts/utility.js" type="text/javascript"> </script>
+	    <script src="/public/javascripts/bootstrap-datatables.min.js" type="text/javascript"> </script>
+        <script src="/public/javascripts/jquery.bootstrap.wizard.min.js" type="text/javascript"></script>
+	    
+        
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('a[href="#penyedia"]').tab('show');
+	});
+
+	$("a[role='tab']").click(
+			function() {
+				var href = $(this).attr("href");
+				document.cookie = "loginTab=" + href
+						+ "; expires=Thu, 22 Sep 2050 12:00:00 UTC; path=/";
+			});
+</script>
+
+    </body>
+</html>
