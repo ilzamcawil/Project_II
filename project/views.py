@@ -30,4 +30,5 @@ def about(req):
     return render(req, 'about/about.html')
 
 def shop(req):
-    return render(req, 'shop/shop.html')
+    return render(req, 'shop/shop.html'
+    )
