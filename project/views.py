@@ -6,7 +6,13 @@ from . import models
 # Create your views here.
 
 # tampilan awal.
+
+   
+
 def index(req):
+    return render(req, 'katalog/indexhompage.html')
+    
+def login(req):
     if req.POST:
         input_nik = req.POST['nik']
         input_password = req.POST['password']
@@ -19,10 +25,6 @@ def index(req):
     return render(req, 'login/index.html', {
         'data': data,
     })
-
-def index(req):
-    return render(req, 'katalog/indexhompage.html')
-    
 
 def about(req):
     return render(req, 'about/about.html')
